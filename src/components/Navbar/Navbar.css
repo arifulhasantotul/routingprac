@@ -1,0 +1,18 @@
+.navbar {
+   font-size: 1.5rem;
+   padding-top: 16px;
+   text-align: center;
+}
+.navbar a {
+   text-decoration: none;
+   padding: 4px 8px;
+   text-transform: uppercase;
+   color: #192a56;
+}
+a.selected {
+   padding: 4px 10px;
+   border-radius: 5px;
+   background: #27ae60;
+   color: #fff;
+   font-weight: bold;
+}

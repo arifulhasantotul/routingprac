@@ -1,13 +1,17 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "./components/About/About";
 import "./App.css";
+import About from "./components/About/About";
+import FriendDetails from "./components/FriendDetails/FriendDetails";
+import Friends from "./components/Friends/Friends";
 import Home from "./components/Home/Home";
-import Friends from "./Friends/Friends";
+import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./components/NotFound/NotFound";
+import PostDetails from "./components/PostDetails/PostDetails";
 
 function App() {
    return (
       <Router>
+         <Navbar></Navbar>
          <Switch>
             {/* default route  */}
             <Route exact path="/">
@@ -18,10 +22,19 @@ function App() {
             <Route path="/home">
                <Home></Home>
             </Route>
+            {/* home post route  */}
+            <Route exact path="/post/:id">
+               <PostDetails></PostDetails>
+            </Route>
 
             {/* friends route  */}
             <Route path="/friends">
                <Friends></Friends>
+            </Route>
+
+            {/* friend route  */}
+            <Route path="/friend/:friendId">
+               <FriendDetails></FriendDetails>
             </Route>
 
             {/* about route  */}
